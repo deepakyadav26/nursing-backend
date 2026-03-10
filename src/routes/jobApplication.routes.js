@@ -11,7 +11,7 @@ router.use(authenticate);
 
 // User endpoints
 router.post('/apply', applyJobValidation, jobAppController.applyJob);
-router.get('/me', jobAppController.getMyApplications);
+router.get('/my-applications', jobAppController.getMyApplications);
 
 // Admin / SubAdmin endpoints
 router.get('/job/:jobId', requireAdminOrSubAdmin, jobAppController.getJobApplications);
