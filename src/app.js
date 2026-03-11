@@ -14,6 +14,7 @@ import adminRoutes from './routes/admin.routes.js';
 
 import jobRoutes from './routes/job.routes.js';
 import jobApplicationRoutes from './routes/jobApplication.routes.js';
+import blogRoutes from './routes/blog.routes.js';
 
 // Import error handlers
 import { errorHandler, notFound } from './middlewares/error.middleware.js';
@@ -56,6 +57,7 @@ app.use('/api/userprofile', profileRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/jobs', jobRoutes);
 app.use('/api/applications', jobApplicationRoutes);
+app.use('/api/blogs', blogRoutes);
 
 // 404 handler
 app.use(notFound);
