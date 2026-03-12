@@ -60,11 +60,6 @@ export const validateUpdateEnquiryStatus = [
     .withMessage('Status is required')
     .isIn(['PENDING', 'CONTACTED', 'RESOLVED'])
     .withMessage('Validation Error: Status must be one of: PENDING, CONTACTED, RESOLVED'),
-  body('remarks')
-    .optional()
-    .trim()
-    .isString()
-    .withMessage('Remarks must be a string'),
 ];
 
 export const validateEnquiryId = [

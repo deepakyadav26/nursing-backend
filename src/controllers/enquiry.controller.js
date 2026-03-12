@@ -134,7 +134,7 @@ export const updateEnquiryStatus = async (req, res) => {
       return sendError(res, 400, 'Validation Error', errors.array());
     }
 
-    const { status, remarks } = req.body;
+    const { status } = req.body;
 
     const enquiry = await Enquiry.findById(req.params.id);
 
@@ -143,9 +143,6 @@ export const updateEnquiryStatus = async (req, res) => {
     }
 
     enquiry.status = status;
-    if (remarks) {
-      enquiry.remarks = remarks;
-    }
 
     await enquiry.save();
 
