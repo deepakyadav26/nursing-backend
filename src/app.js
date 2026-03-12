@@ -15,6 +15,7 @@ import adminRoutes from './routes/admin.routes.js';
 import jobRoutes from './routes/job.routes.js';
 import jobApplicationRoutes from './routes/jobApplication.routes.js';
 import blogRoutes from './routes/blog.routes.js';
+import enquiryRoutes from './routes/enquiry.routes.js';
 
 // Import error handlers
 import { errorHandler, notFound } from './middlewares/error.middleware.js';
@@ -58,6 +59,7 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/jobs', jobRoutes);
 app.use('/api/applications', jobApplicationRoutes);
 app.use('/api/blogs', blogRoutes);
+app.use('/api/enquiries', enquiryRoutes);
 
 // 404 handler
 app.use(notFound);
